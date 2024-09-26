@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #1a1a1a;
+}
+
+#wrapper {
+  margin: 28px;
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 7px;
+  float: left;
+}
+
+#taskInput {
+  height: 45px;
+  border-radius: 7px;
+  background-color: #333333;
+  color: #ffff;
+  border: none;
+  padding-left: 10px;
+}
+
+#taskInput:hover {
+  background-color: #1a1a1a;
+  cursor: pointer;
+}
+
+#taskInput:focus {
+  outline: none;
+  outline-color: #333333;
+}
+
+#addTask {
+  height: 45px;
+  width: 80px;
+  background-color: #333333;
+  color: #ffff;
+  border: none;
+  border-radius: 7px;
+}
+
+#taskArea {
+  width: 39%;
+  margin: 25px;
+  float: right;
+  border-radius: 7px;
+  padding: 20px;
+  background-color: #262626;
+}
+
+#addTask:hover {
+  background-color: #1a1a1a;
+  cursor: pointer;
+}
+
+li {
+  font-size: 18px;
+  color: #ffff;
+  list-style: "- ";
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0) 70%);
+  margin: 15px;
+  border-radius: 5px;
+}
+
+#deleteButton { 
+  height: 35px;
+  width: 80px;
+  background-color: #333333;
+  color: #ffff;
+  border: none;
+  border-radius: 7px;
+}
+
+#deleteButton:hover {
+  background-color: #1a1a1a;
+  cursor: pointer;
+}
+
+#finishTask {
+  height: 35px;
+  width: 80px;
+  margin-left: 10px;
+  background-color: #333333;
+  color: #ffff;
+  border: none;
+  border-radius: 7px;
+}
+
+#finishTask:hover {
+  background-color: #1a1a1a;
+  cursor: pointer;
+}
