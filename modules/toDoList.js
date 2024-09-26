@@ -1,10 +1,10 @@
 export class todoList {
   constructor(listElement) {
     this.todoList = listElement;
-    this.todos = [];
+    this.todos = JSON.parse(localStorage.getItem('todos')) || [];
   }
 
-  addtoList(text) {
+  addToUI(text) {
     // Creating the li for storing the list item
     var li = document.createElement("li");
     li.textContent = text;
@@ -32,6 +32,10 @@ export class todoList {
     return li;
   }
 
+  addtoList(text) {
+    this.addToUI(text);
+  }
+
   removeFromList(text) {
     let childs = Array.from(this.todoList.childNodes);
     let item = childs.find(i => i.innerText === text);
@@ -45,11 +49,17 @@ export class todoList {
   addTodo(text) {
     this.todos.push(text);
     this.addtoList(text);
+    this.saveTodos();
   }
   
   removeTodo(text) {
     this.todos = this.todos.filter(i => i !== text);
     this.removeFromList(text);
+    this.saveTodos();
+  }
+
+  saveTodos() {
+    localStorage.setItem('todos', JSON.stringify(this.todos));
   }
 }
 

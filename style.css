@@ -4,20 +4,38 @@
 }
 
 body {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#wrapper {
-  margin: 28px;
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+#wrapper, #taskArea {
+  flex: 1;
   background-color: #262626;
   padding: 20px;
   border-radius: 7px;
-  float: left;
+  margin: 0 10px;
+}
+
+#wrapper {
+  max-width: 500px;
 }
 
 #taskInput {
+  width: 100%;
   height: 45px;
   border-radius: 7px;
   background-color: #333333;
@@ -32,8 +50,7 @@ body {
 }
 
 #taskInput:focus {
-  outline: none;
-  outline-color: #333333;
+  outline: none; 
 }
 
 #addTask {
@@ -43,15 +60,7 @@ body {
   color: #ffff;
   border: none;
   border-radius: 7px;
-}
-
-#taskArea {
-  width: 39%;
-  margin: 25px;
-  float: right;
-  border-radius: 7px;
-  padding: 20px;
-  background-color: #262626;
+  margin-top: 10px;
 }
 
 #addTask:hover {
@@ -62,13 +71,17 @@ body {
 li {
   font-size: 18px;
   color: #ffff;
-  list-style: "- ";
+  list-style: none;
   background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0) 70%);
-  margin: 15px;
+  margin: 15px 0;
+  padding: 10px;
   border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#deleteButton { 
+#deleteButton, #finishTask { 
   height: 35px;
   width: 80px;
   background-color: #333333;
@@ -77,22 +90,11 @@ li {
   border-radius: 7px;
 }
 
-#deleteButton:hover {
+#deleteButton:hover, #finishTask:hover {
   background-color: #1a1a1a;
   cursor: pointer;
 }
 
 #finishTask {
-  height: 35px;
-  width: 80px;
-  margin-left: 10px;
-  background-color: #333333;
-  color: #ffff;
-  border: none;
-  border-radius: 7px;
-}
-
-#finishTask:hover {
-  background-color: #1a1a1a;
-  cursor: pointer;
+  margin-left:10px
 }
